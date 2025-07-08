@@ -342,6 +342,32 @@ body.dark .projeto-card p {
   margin-top: 90px;
 }
 
+.tecnologia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 60px; /* largura mínima pra encaixar nome */
+  flex-shrink: 0;
+}
+
+.tecnologia img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s;
+}
+
+.tecnologia span {
+  font-size: 0.7rem;
+  color: #555;
+  text-align: center;
+  word-break: break-word;
+}
+
+body.dark .tecnologia span {
+  color: #ccc;
+}
+
 .carrossel-inner {
   display: flex;
   gap: 24px;
