@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden; /* Impede o body de rolar */
+}
+
+.conectar {
+  margin-top: 30px; /* espaço em cima da seção conectar */
+  text-align: center;
+}
+
+.conectar p {
+  margin: 8px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.conectar a {
+  color: #2e2e2e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.conectar a:hover {
+  text-decoration: underline;
+  color: #555;
+}
+
+.conectar i {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Barra lateral */
+.dock-left {
+  width: 220px;
+  background-color: #2e2e2e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar-content {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links a.ativo {
+  font-weight: bold;
+  background-color: #444;
+}
+
+/* Foto e nome */
+.perfil {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.perfil img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+}
+
+.perfil h1 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.perfil p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Navegação */
+.nav-links {
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.nav-links li {
+  width: 100%;
+}
+
+.nav-links a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 12px 70px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #444;
+}
+
+/* Conteúdo principal */
+.conteudo {
+  flex: 1;
+  background-color: #f0f0f0;
+  position: relative;
+  overflow-y: hidden; /* Faz só o conteúdo rolar */
+  height: 100vh; /* Garante altura cheia para permitir rolagem */
+}
+
+/* Seções com animação */
+.secao {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  padding: 40px;
+  z-index: 0;
+  pointer-events: none;
+  width: calc(100% - 240px);
+  max-width: none;
+  width: calc(100% - 240px);
+  margin-top: 130px;
+}
+
+.secao.ativa {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.secao.escondida {
+  opacity: 0;
+  transform: translateY(-30px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+p, li {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Projetos - animação e layout */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.projetos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.projeto {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+
+.secao.projetos-animada .projeto {
+  animation: slideInRight 0.6s ease forwards;
+}
+
+.secao.projetos-animada .projeto:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.secao.projetos-animada .projeto:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* Botão de modo escuro */
+.modo-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.2s;
+}
+
+.modo-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Modo escuro aplicado ao body */
+body.dark {
+  background-color: #1e1e1e;
+}
+
+body.dark .dock-left {
+  background-color: #1c1c1c;
+}
+
+body.dark .conteudo {
+  background-color: #2a2a2a;
+}
+
+body.dark .secao {
+  color: #eee;
+}
+
+body.dark h2,
+body.dark p,
+body.dark li {
+  color: #eee;
+}
+
+body.dark a {
+  color: #9fc4ff;
+}
+
+body.dark .projeto {
+  background-color: #333;
+  color: #eee;
+}
+
+body.dark .nav-links a {
+  color: #ccc;
+}
+
+body.dark .nav-links a:hover {
+  background-color: #444;
+}
+
+/* Container flexível com quebra de linha */
+.projetos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .projeto-card {
+    width: 100%;
+  }
+}
+
+/* Estilo do card */
+.projeto-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: calc(50% - 10px); /* 2 por linha com 20px de gap total */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.projeto-card a {
+  text-decoration: none;
+  color: inherit; /* garante que a cor do texto não mude pro azul padrão de link */
+}
+
+.projeto-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.projeto-card .info {
+  padding: 15px;
+}
+
+.projeto-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.projeto-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Efeito ao passar o mouse */
+.projeto-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Modo escuro */
+body.dark .projeto-card {
+  background-color: #333;
+}
+
+body.dark .projeto-card h3,
+body.dark .projeto-card p {
+  color: #eee;
+}
+
+.carrossel-tecnologias {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 90px;
+}
+
+.carrossel-inner {
+  display: flex;
+  gap: 24px;
+  animation: rolar 30s linear infinite;
+  width: max-content;
+}
+
+.carrossel-inner img {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.carrossel-inner img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes rolar {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Modo escuro */
+body.dark .carrossel-inner img {
+  filter: brightness(0.9);
+}

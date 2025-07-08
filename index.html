@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nathan Fernandes | Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="imagens/logodef2.png" type="image/png" />
+</head>
+<body>
+
+  <!-- Barra lateral com foto e navegação -->
+  <nav class="dock-left">
+    <div class="sidebar-content">
+      <div class="perfil">
+        <img src="imagens/foto.jpeg" alt="Foto de Nathan Fernandes" />
+        <h1>Nathan Fernandes</h1>
+        <p>Full Stack Dev</p>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+      </ul>
+      <button id="modo-toggle" class="modo-btn">
+        <span id="modo-texto">Modo Escuro</span>
+        <i class="fas fa-moon" id="modo-icon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main class="conteudo">
+    <section id="sobre" class="secao ativa">
+      <h2>Soluções simples para problemas reais.</h2>
+      <p>
+        Transformar problemas em soluções simples é o que me move.
+        Sou um desenvolvedor full stack. Transformo desafios em sistemas funcionais que fazem a diferença.  
+        Gosto de criar sistemas multifuncionais — verdadeiros “canivetes suíços” — que ajudam a otimizar o dia a dia de equipes e automatizar processos.
+      </p>
+      <p>
+        Tenho experiência com C#, Python, Flask, bancos de dados, automações, APIs e visualização de dados com Power BI.  
+        Me preocupo tanto com o funcionamento quanto com a usabilidade: gosto de tornar o front-end acessível e funcional.
+      </p>
+
+      <div class="conectar">
+        <p><strong>Vamos conversar?</strong> Me acompanhe e conecte-se comigo nas redes:</p>
+        <p>
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/Nathan-Dev-udia" target="_blank" rel="noopener noreferrer">github.com/Nathan-Dev-udia</a>
+        </p>
+        <p>
+          <i class="fab fa-linkedin"></i>
+          <a href="https://linkedin.com/in/nathan-fernandes" target="_blank" rel="noopener noreferrer">linkedin.com/in/nathan-fernandes</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="projetos" class="secao">
+      <h2>Meus Projetos</h2>
+      <div class="projetos-container">
+
+        <!-- Cards com imagem gerada -->
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/AutoGest" target="_blank">
+            <img src="imagens/autogest.jpeg" alt="AutoGest Logo" />
+            <div class="info">
+              <h3>AutoGest</h3>
+              <p>Sistema web Flask com Bling API para gestão de autocenters, consulta de baterias, estoque e dashboard interativo.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/BateriaFacil" target="_blank">
+            <img src="imagens/bateriafacil.jpeg" alt="BateriaFácil Logo" />
+            <div class="info">
+              <h3>BateriaFácil</h3>
+              <p>Aplicação desktop C# com SQLite para identificar baterias por modelo de veículo, interface simples para auto centers.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/react-node-bateria-api" target="_blank">
+            <img src="imagens/nodereact.png" alt="reactnodebateria Logo" />
+            <div class="info">
+              <h3>React Node Bateria</h3>
+              <p>Projeto fullstack com API Node.js + Express gerando dados diretamente de um banco SQLite local. Frontend em React para consulta e recomendação rápida de baterias automotivas por veículo, marca e amperagem.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/BackupDriveCSharp" target="_blank">
+            <img src="imagens/pixeldrive.png" alt="Backup Google DriveAPI Logo" />
+            <div class="info">
+              <h3>Backup Google DriveAPI</h3>
+              <p>Aplicação desktop C# que compacta e envia pastas locais ao Google Drive automaticamente, com interface moderna.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/TkBackupDrive" target="_blank">
+            <img src="imagens/tkbackup.png" alt="TkBackupDrive Logo" />
+            <div class="info">
+              <h3>TkBackupDrive</h3>
+              <p>Backup automatizado em Python com Tkinter, enviando pastas para o Google Drive com nomeação por data e hora.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/nfe-automation-script" target="_blank">
+            <img src="imagens/nfeautomacao.png" alt="Nfe Automation Logo" />
+            <div class="info">
+              <h3>Nfe Automation</h3>
+              <p>Script Python com Selenium e PyAutoGUI para automação do cadastro de produtos e notas fiscais no ConnectUse.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/Plennus" target="_blank">
+            <img src="imagens/plennus-logo.png" alt="Plennus Logo" />
+            <div class="info">
+              <h3>Plennus</h3>
+              <p>Aplicação desktop C# para importação e visualização de XMLs de NF-e, exibindo dados de emitente, produtos e impostos.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/estudo-de-botoes-em-cs" target="_blank">
+            <img src="imagens/btns.png" alt="Botões em C# Logo" />
+            <div class="info">
+              <h3>Estudo de Botões em C#</h3>
+              <p>Projeto experimental para criação de botões estilizados e modernos em Windows Forms.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/gasolina-etanol" target="_blank">
+            <img src="imagens/gasolinatres.png" alt="Combustível ou Gasolina Logo" />
+            <div class="info">
+              <h3>Combustível ou Gasolina?</h3>
+              <p>Aplicativo simples em C# para comparar preço do etanol e gasolina e indicar o mais vantajoso com base na relação de custo-benefício.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/jogodavelha1.0" target="_blank">
+            <img src="imagens/jogodavelha.png" alt="Jogo da Velha XAML Logo" />
+            <div class="info">
+              <h3>Jogo da Velha 1.0 (XAML)</h3>
+              <p>Projeto de estudo para interfaces em XAML com C#, focado em separar lógica e visual.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="projeto-card">
+          <a href="https://github.com/Nathan-Dev-udia/beecrownd-kt-py" target="_blank">
+            <img src="imagens/beec.png" alt="beecrowndrep Logo" />
+            <div class="info">
+              <h3>Resoluções do Beecrownd</h3>
+              <p>Projeto de estudo para interfaces em XAML com C#, focado em separar lógica e visual.</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="tecnologias" class="secao">
+      <h2>Tecnologias</h2>
+      <p>
+        Aqui estão algumas das principais tecnologias que utilizo no meu dia a dia para desenvolver sistemas completos, automatizar processos e criar soluções práticas que fazem diferença de verdade.
+      </p>
+
+      <div class="carrossel-tecnologias">
+        <div class="carrossel-inner">
+          <!-- Ícones originais -->
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" title="C#" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="Python" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" title="Node.js" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" title="React" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" title="Flask" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" title="SQLite" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" title="MySQL" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" title="CSS" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" title="Kotlin" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" title="Jupyter" />
+          <img src="https://img.icons8.com/color/48/000000/power-bi.png" title="Power BI" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" title="Figma" />
+
+          <!-- Cópia para looping -->
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" title="C#" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="Python" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" title="Node.js" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" title="React" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" title="Flask" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" title="SQLite" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" title="MySQL" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" title="CSS" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" title="Kotlin" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" title="Jupyter" />
+          <img src="https://img.icons8.com/color/48/000000/power-bi.png" title="Power BI" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" title="Figma" />
+        </div>
+      </div>
+
+    </section>
+
+
+  <!-- Script para transição suave -->
+  <script src="script.js"></script>
+</body>
+</html>
