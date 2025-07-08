@@ -39,6 +39,7 @@ Aqui você encontra projetos variados, desde aplicações desktop em C# até sis
 ## Contato
 
 Fique à vontade para entrar em contato para colaborações, dúvidas ou propostas.
+Emai: nathan.dev.udia@gmail.com
 
 ---
 
