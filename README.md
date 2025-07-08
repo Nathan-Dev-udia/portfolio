@@ -33,6 +33,7 @@ Aqui você encontra projetos variados, desde aplicações desktop em C# até sis
 - [GitHub](https://github.com/Nathan-Dev-udia)
 - [LinkedIn](https://linkedin.com/in/nathan-fernandes)
 - [Beecrowd](https://judge.beecrowd.com/pt/profile/595071)
+- [Portfólio](https://nathan-dev-udia.github.io/portfolio/)
 
 ---
 
