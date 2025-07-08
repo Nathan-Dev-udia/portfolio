@@ -8,7 +8,7 @@ body {
   display: flex;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
-  overflow: hidden; /* Impede o body de rolar */
+  overflow: auto; /* Impede o body de rolar */
 }
 
 .conectar {
@@ -134,12 +134,12 @@ body {
   transform: translateY(30px);
   transition: all 0.5s ease;
   position: absolute;
-  left: 150px;
+  left: 0px;
   top: 0;
   padding: 40px;
   z-index: 0;
   pointer-events: none;
-  width: calc(100% - 240px);
+  width: 100%;
   max-width: none;
   width: calc(100% - 240px);
   margin-top: 130px;
@@ -300,6 +300,11 @@ body.dark .nav-links a:hover {
   object-fit: cover;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .projeto-card .info {
   padding: 15px;
 }
@@ -367,4 +372,92 @@ body.dark .projeto-card p {
 /* Modo escuro */
 body.dark .carrossel-inner img {
   filter: brightness(0.9);
+}
+
+@media (max-width: 768px) {
+  .dock-left {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  .sidebar-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .perfil {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    gap: 10px;
+  }
+
+  .perfil h1,
+  .perfil p {
+    display: none; /* Oculta texto do nome no mobile */
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .nav-links li {
+    width: auto;
+  }
+
+  .nav-links a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .modo-btn {
+    font-size: 1rem;
+  }
+
+  .conteudo {
+    margin-top: 80px; /* espaço pro topo */
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .secao {
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .projeto-card {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .secao {
+    left: 150px;
+    width: calc(100% - 240px);
+  }
+
+  .conteudo {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .secao {
+    padding-top: 80px; /* empurra o conteúdo pra baixo da barra */
+  }
 }
