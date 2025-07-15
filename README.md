@@ -44,4 +44,4 @@ Emai: nathan.dev.udia@gmail.com
 
 ---
 
-*Este portfólio está em constante atualização, refletindo a evolução e novos projetos do Nathan.*
+*Este portfólio está em constante atualização, refletindo a evolução e novos projetos.*
